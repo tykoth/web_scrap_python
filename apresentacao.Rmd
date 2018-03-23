@@ -1,0 +1,96 @@
+---
+title: "Web Scraping"
+author: "André Pignata"
+date: "March 23, 2018"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+# Web Scraping - de requests à Selenium
+
+## Quem estou, porque sou, onde vim?
+  
+  - André Luiz Martins Pignata
+    - gmail@andrepignata.com.br
+  - Bacharel em Ciências da Computação pela UFSCAR.
+    - Programador de Clipper, Delphi, PHP, PL/SQL, R e Python
+    - Com sidequests em Javascript e P4A.
+  - Analista de Sistemas do Departamento de Economia
+    - Auxilio alunos e docentes em pesquisas
+  - Anapropegua da GEDANKEN
+    - Impacto em gestão pública utilizando *Big Data* e *IA*
+
+  
+  
+## Ideia por trás do webscrapping  
+
+  - A técnica de Web scraping consiste em extrair dados diretamente de páginas ou serviços online
+  - Vamos ver 3 técnicas diferentes para obter os dados
+  - Alguns sites exigirão muito mais trabalho de codificação, especialmente os sites que utilizam **AJAX**
+  
+### Fluxo de data Science
+<img src='cycle.png' width='800px'></img>
+
+
+## Princípios básicos 
+
+  - Identificar
+  - Navegar
+  - Replicar
+  - Parsear
+  - Validar
+  
+## Ferramentas
+  - Python
+  - Virtualenv (anaconda)
+  - Pacotes
+    - conda install -c conda-forge selenium 
+    - conda install spyder pandas beautifulsoup4 sqlalchemy psycopg2
+  - Spyder versus Jupyter
+
+## Técnicas/bibliotecas para webscrapping
+
+  - Requests
+    - IBGE Cidades
+    - Google geocode api
+  - Beautifulsoup
+    - Americanas.com.br
+  - Selenium
+    - CVM
+
+## Requests
+
+  - IBGE Cidades
+      - Cuidados ao fazer webscrap em sites (DoS)
+      - Olhando o site (torcendo para ele não estar quebrado)
+      - Olhando o script
+        - Alternativa: dados_govbr.py
+    
+  - Google geocode api
+    - [Google geocode api](https://developers.google.com/maps/documentation/geocoding/intro?hl=pt-br)
+    - Olhando o retorno no browser
+    - Json
+    - Olhando o script
+
+
+
+## Beautifulsoup
+
+  - Americanas.com.br
+    - Principais funções do Beautifulsoup
+  - Lattes
+    - Parse do header (Form data e Sublime Text - exp regular - 42)
+      - (.\*): (.*) -> '\\1':'\\2',
+    - SQL Injection
+    - Paginação
+    - Passagem de parâmetros pela URL (get)
+
+## Selenium
+
+  - [Material para consulta](https://goo.gl/QLdDbo)
+  - Olhando o script para entender
+  - CVM
+    - estratégia de paginação
+    - pontos de reinício
